@@ -19,6 +19,9 @@ public class teste {
 			System.out.println("Not ok");
 		*/
 		
+		//teste 
+		System.out.println("Filipe teste");
+		
 		
 		
 		
