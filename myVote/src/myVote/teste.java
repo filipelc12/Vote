@@ -36,7 +36,7 @@ public class teste {
 		
 		
 		
-		Login teste = new Login("arthur", "admin123");
+		Login teste = new Login("teste", "teste");
 		
 		teste.verificaLogin();
 		

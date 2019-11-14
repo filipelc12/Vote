@@ -16,6 +16,10 @@ public class Chapa {
 		this.numeroChapa = numeroChapa;
 		
 	}
+	
+	public Chapa(int numeroChapa) {
+		this.numeroChapa = numeroChapa;
+	}
 
 
 

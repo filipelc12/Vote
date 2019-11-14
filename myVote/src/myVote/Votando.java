@@ -22,14 +22,16 @@ public class Votando {
 	}
 	
 	
-	public void votacao() {
+	public Voto votacao() {
 		
 		/*
 		 * Implementar o loop de votacao
 		 * 
 		 * criacao do boolean finaliza votacao
 		 */
-		int t = 1;
+		int t = 1; // saida do loop
+		Chapa tChapa = null; // chapa que será votada
+		Voto tVoto = null; // retorno do voto
 		while(t==1){
 			
 			Scanner in = new Scanner(System.in);
@@ -41,7 +43,7 @@ public class Votando {
 				System.out.println(chapas[i].mostraNaUrna());
 			
 			
-			// Imprimi e recebe o numero da chapa
+			// Imprime e recebe o numero da chapa
 			System.out.println("Digite o numero da chapa");
 			int votoIn = in.nextInt();
 			
@@ -56,6 +58,10 @@ public class Votando {
 					char confirmaVoto = confirma.next().charAt(0); //necessario tratar exceção do numero
 					if(confirmaVoto == 's') { // if para comparar o voto
 						System.out.println("Voto confirmado");
+						
+						//Não sei como retornar um Voto melhor do que dessa forma 
+						tChapa.setNumeroChapa(votoIn); 
+						tVoto.setChapa(tChapa);
 						t = 2;// t para sair do loop
 						
 					}
@@ -70,13 +76,19 @@ public class Votando {
 				else {
 					System.out.println("Numero de chapa invalido! Digite outro numero");
 					t = 1;
-				}
+				}//saida da verificacao do numero invalido
 				
-			}
+			} // saida do for de chapas
 			
 			
-		}
-	}
+		}// loop principal
+		
+		System.out.println("Numero da chapa TESTE" +tChapa.getNumeroChapa());
+		return tVoto;
+		
+		
+		
+	}//Fim do metodo
 			
 				
 			
