@@ -30,8 +30,8 @@ public class Votando {
 		 * criacao do boolean finaliza votacao
 		 */
 		int t = 1; // saida do loop
-		Chapa tChapa = null; // chapa que será votada
-		Voto tVoto = null; // retorno do voto
+		Chapa tChapa = new Chapa(); // chapa que será votada
+		Voto tVoto = new Voto(); // retorno do voto
 		while(t==1){
 			
 			Scanner in = new Scanner(System.in);
@@ -60,8 +60,8 @@ public class Votando {
 						System.out.println("Voto confirmado");
 						
 						//Não sei como retornar um Voto melhor do que dessa forma 
-						tChapa.setNumeroChapa(votoIn); 
-						tVoto.setChapa(tChapa);
+						//tChapa = chapas[i];
+						tVoto.setChapa(chapas[i]);
 						t = 2;// t para sair do loop
 						
 					}

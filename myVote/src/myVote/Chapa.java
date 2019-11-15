@@ -20,6 +20,11 @@ public class Chapa {
 	public Chapa(int numeroChapa) {
 		this.numeroChapa = numeroChapa;
 	}
+	
+	public Chapa() {
+		this.nomeChapa = nomeChapa;
+		this.numeroChapa = numeroChapa;
+	}
 
 
 

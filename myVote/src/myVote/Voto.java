@@ -9,6 +9,10 @@ public class Voto {
 		id = id++;
 		this.chapa = chapa; 
 	}
+	
+	public Voto() {
+		
+	}
 
 	public int getId() {
 		return id;

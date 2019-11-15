@@ -11,6 +11,7 @@ public class Login {
 	public Login(String nomelogin, String senha) {
 		this.nomelogin = nomelogin;
 		this.senha = senha;
+		this.verificado = verificado;
 		
 	}
 
@@ -54,7 +55,7 @@ public class Login {
 		else {
 			System.out.println("Digite sua senha: ");
 			String entradaSenha = in.nextLine();
-			while(!entradaSenha.equals(senha)) {
+			while(!entradaSenha.equals(senha) && !verificado) {
 				System.out.println("Senha incorreta! \n digite novamente!");
 				entradaSenha = in.nextLine();
 			}

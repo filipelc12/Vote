@@ -6,10 +6,10 @@ public class teste {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		/*
+		
 		Scanner entrada = new Scanner (System.in);
 		char c;
-		
+		/*
 		c = entrada.next().charAt(0);
 		
 		System.out.println(c);
@@ -23,7 +23,7 @@ public class teste {
 		System.out.println("Filipe sim");
 		
 		
-		
+		/*
 		
 		
 		int mais = 1;
@@ -51,7 +51,13 @@ public class teste {
 		//System.out.println("teste");
 		
 		
-
+*/
+		
+		Login log = new Login("teste", "teste");
+		
+		log.verificaLogin();
+		
+		//System.out.println(log.get);
 		
 		
 
