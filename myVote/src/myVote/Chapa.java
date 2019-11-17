@@ -14,16 +14,15 @@ public class Chapa {
 	public Chapa(String nomeChapa, int numeroChapa) {
 		this.nomeChapa = nomeChapa;
 		this.numeroChapa = numeroChapa;
+		this.contadorDeVotos = contadorDeVotos;
 		
 	}
 	
-	public Chapa(int numeroChapa) {
-		this.numeroChapa = numeroChapa;
-	}
+	
 	
 	public Chapa() {
-		this.nomeChapa = nomeChapa;
-		this.numeroChapa = numeroChapa;
+		this.nomeChapa = "Chapa nulo";
+		this.numeroChapa = 0;
 	}
 
 

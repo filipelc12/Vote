@@ -2,7 +2,7 @@ package myVote;
 
 public class Voto {
 	
-	private int id;
+	private int id = 0;
 	private Chapa chapa;
 	
 	public Voto(Chapa chapa) {
@@ -11,6 +11,8 @@ public class Voto {
 	}
 	
 	public Voto() {
+		this.id = id++;
+		
 		
 	}
 

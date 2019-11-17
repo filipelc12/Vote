@@ -54,8 +54,31 @@ public class teste {
 */
 		
 		Login log = new Login("teste", "teste");
+		Chapa chapa1 = new Chapa("PT", 13);
+		Chapa chapa2 = new Chapa("NOVO", 30);
+		Chapa chapa3 = new Chapa("PTB", 12);
+		Chapa chapa4 = new Chapa("PSOL", 50);
+		
+		Urna ur = new Urna();
+		
+		Voto vota = new Voto();
+		
+		
+		Chapa chapas[] = {chapa1, chapa2, chapa3, chapa4};
 		
 		log.verificaLogin();
+		
+		Votando vot = new Votando(log, chapas);
+		
+		vot.votacao();
+		
+		
+		//ur.registraVoto(vot.votacao());
+	
+		
+		//Votando vot = new Votando()
+		
+		
 		
 		//System.out.println(log.get);
 		
