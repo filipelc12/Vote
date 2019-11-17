@@ -27,6 +27,7 @@ public class Votando {
 		Voto voto = new Voto(); //cria um voto
 		Scanner in = new Scanner(System.in);
 		Chapa chaps = new Chapa(); // Chapa que irá receber um voto
+		Chapa chapaNulo = new Chapa("Nulo", 0); //Caso o usuario vote um um id de chapa nao econtrado, seu voto sera anulado
 		
 		/*
 		 * Implementar o loop de votacao
@@ -51,10 +52,11 @@ public class Votando {
 			
 			//loop para aplicar o voto
 			for(int i = 0;  i<= chapas.length -1; i++) {
-				if(recebeVoto == chapas[i].getNumeroChapa()) {
-					chaps.setNomeChapa(chapas[i].getNomeChapa());
+				if(recebeVoto == chapas[i].getNumeroChapa()) { // se o numero do usuario for igual ao numero da chapa
+					chaps.setNomeChapa(chapas[i].getNomeChapa()); 
 					chaps.setNumeroChapa(chapas[i].getNumeroChapa());
 					voto.setChapa(chapas[i]);
+					chapas[i].setContadorDeVotos(chapas[i].getContadorDeVotos() +1); // Implementa um voto no contador
 					System.out.println("Voce votou na Chapa: " +chapas[i].getNomeChapa());
 					System.out.println("Obrigado!");
 					feito = true; // se o voto foi computado o boolean para sair do sistema rece TRUE
@@ -70,6 +72,8 @@ public class Votando {
 			for(int i = 0; i<= chapas.length -1; i++) {
 					if(recebeVoto != chapas[i].getNumeroChapa()) {
 						System.out.println("Numero nao encontrado. Seu voto sera computado como nulo");
+						chapaNulo.setContadorDeVotos(chapaNulo.getContadorDeVotos() +1); // Incrementa o contador de voto nulo
+						voto.setChapa(chapaNulo); // Faz o voto ter a chapa NULO;
 						feito = true;
 						break;
 						

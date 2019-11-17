@@ -33,5 +33,11 @@ public class Voto {
 	}
 	
 	
+	// Imprime as informações dos votos
+	public String imprimir() {
+		return "Nome da Chapa: " +chapa.getNomeChapa() +"\nNome Da Chapa: " +chapa.getNomeChapa();
+	}
+	
+	
 
 }

@@ -1,5 +1,6 @@
 package myVote;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class teste {
@@ -54,10 +55,21 @@ public class teste {
 */
 		
 		Login log = new Login("teste", "teste");
-		Chapa chapa1 = new Chapa("PT", 13);
-		Chapa chapa2 = new Chapa("NOVO", 30);
-		Chapa chapa3 = new Chapa("PTB", 12);
-		Chapa chapa4 = new Chapa("PSOL", 50);
+		Chapa chapa1 = new Chapa("CHAPA BRASIL", 13);
+		Chapa chapa2 = new Chapa("CHAPA AMERICA", 30);
+		Chapa chapa3 = new Chapa("CHAPA RIO GRANDE", 12);
+		Chapa chapa4 = new Chapa("CHAPA SUL", 50);
+		Chapa chapa5 = new Chapa("Chapa NULO", 0);
+		
+		ContaVotos conta = new ContaVotos();
+		
+		conta.adicionaChapa(chapa1);
+		conta.adicionaChapa(chapa2);
+		conta.adicionaChapa(chapa3);
+		conta.adicionaChapa(chapa4);
+		conta.adicionaChapa(chapa5);
+			
+	
 		
 		Urna ur = new Urna();
 		
@@ -70,18 +82,30 @@ public class teste {
 		
 		Votando vot = new Votando(log, chapas);
 		
-		vot.votacao();
+				
+		Urna urna = new Urna();
+		Urna urna2 = new Urna();
 		
 		
-		//ur.registraVoto(vot.votacao());
-	
-		
-		//Votando vot = new Votando()
+		//System.out.println(urna.getId());
 		
 		
 		
-		//System.out.println(log.get);
 		
+		Voto voto = vot.votacao();
+		urna.adicionaVotos(voto);
+				
+		
+		Voto voto2 = vot.votacao();
+		urna2.adicionaVotos(voto2);
+		
+		System.out.println(urna.lista());
+		
+		System.out.println("O total de votos e: " +urna.getContagemDeVoto());
+		
+		System.out.println(chapa5.getContadorDeVotos());
+		
+		conta.votoPorChapa();
 		
 
 	}

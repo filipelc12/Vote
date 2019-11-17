@@ -8,19 +8,10 @@ public class Urna {
 	
 	private int id;
 	private int contagemDeVoto;
-	private Voto[] votos;
+	private static ArrayList<Voto> votos = new ArrayList<>();
 	
-	public Urna(Voto votos[]) {
-		this.votos = votos;
-		
-		
-		
-	} 
+
 	
-	public Urna() {
-		id++;
-		
-	}
 
 	public int getId() {
 		return id;
@@ -37,37 +28,81 @@ public class Urna {
 	public void setContagemDeVoto(int contagemDeVoto) {
 		this.contagemDeVoto = contagemDeVoto;
 	}
-
-	public Voto[] getVotos() {
+	
+	
+	public ArrayList<Voto> getVotos() {
 		return votos;
 	}
 
-	public void setVotos(Voto[] votos) {
+	public void setVotos(ArrayList<Voto> votos) {
 		this.votos = votos;
 	}
+
+	//metodo que adiciona votos na urna
+	public void adicionaVotos(Voto voto) {
+		
+		
+
+		votos.add(voto);
+		
+		
+	}
 	
-	public int contagemVoto() {
+	
+	static public void adicionar(Voto voto) {
+		votos.add(voto);
+	}
+	
+	//lista votos da urna
+	static public String lista() {
+		String saida = "";
 		
-		int contagem = 0;
+		int i = 0;
 		
-		for(int i = 0; i <= votos.length -1; i++) {
-			contagem =+ i;
+		for(Voto v: votos) {
+			saida += "\n====== VOTO NUMERO: " +(i++) +"=====\n";
+			saida += v.imprimir();
+		}
+		
+		
+		return saida;
+		
+		
+	}
+	
+	public int contaVoto() {
+		int votoContador = 1;
+		
+		int i = 0;
+		
+		for(Voto v: votos) {
+			votoContador += i++;
+		}
+		
+		contagemDeVoto = votoContador;
+		
+		return votoContador;
+		
+		
+	}
+	
+	// passa os votos da urna para o contato de votos de cada chapa
+	public int passaVotoContador() {
+		
+		int contador = 0;
+		int i = 0;
+		
+		for(Voto v: votos) {
 			
 		}
-			
-		contagemDeVoto = contagem;
 		
-		return contagemDeVoto;
+		
+		
+		
+		return contador;
 	}
 	
 	
-	public void registraVoto(Voto voto) {
-		
-		this.votos[votos.length +1] = voto;
-		
-	}
-
-
 	
 
 }
