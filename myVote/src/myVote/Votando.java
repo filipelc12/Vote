@@ -26,7 +26,7 @@ public class Votando {
 		
 		Voto voto = new Voto(); //cria um voto
 		Scanner in = new Scanner(System.in);
-		Chapa chaps = new Chapa(); // Chapa que irá receber um voto
+		Chapa chaps = new Chapa(); // Chapa que irï¿½ receber um voto
 		Chapa chapaNulo = new Chapa("Nulo", 0); //Caso o usuario vote um um id de chapa nao econtrado, seu voto sera anulado
 		
 		/*
@@ -36,7 +36,7 @@ public class Votando {
 		 */
 		boolean feito = false; // boolean para sair do loop
 		
-		//loop da votação
+		//loop da votaï¿½ï¿½o
 		do{
 			//impressao de chapas
 			for(int i = 0; i <= chapas.length -1; i++) {
@@ -64,7 +64,7 @@ public class Votando {
 					
 				}
 			}
-			if(feito)// Se true ele dá um break para sair do WHILE e nao cair no segundo for para 'pegar' votos nulos
+			if(feito)// Se true ele dï¿½ um break para sair do WHILE e nao cair no segundo for para 'pegar' votos nulos
 				break;
 			
 				
