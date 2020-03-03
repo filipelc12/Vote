@@ -14,6 +14,17 @@ public class Chapa {
 		
 		
 	}
+
+
+	@Override
+	public String toString() {
+		return "Chapa [nomeChapa=" + nomeChapa + ", numeroChapa=" + numeroChapa + "]";
+	}
+	
+	
+	
+	
+	
 	
 	
 	
