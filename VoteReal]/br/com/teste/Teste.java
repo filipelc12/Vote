@@ -32,7 +32,7 @@ public class Teste {
 		
 		voto = votando.executaVoto();
 		
-		voto.getChapa();
+		System.out.println(voto.getChapa());
 		
 		
 		
