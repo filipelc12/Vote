@@ -23,8 +23,18 @@ public class Teste {
 		
 		Votando votando = new Votando(chapas);
 		
-		votando.toString();
 		System.out.println(votando.toString());
+		
+		
+		
+		
+		Voto voto;
+		
+		voto = votando.executaVoto();
+		
+		voto.getChapa();
+		
+		
 		
 		
 		

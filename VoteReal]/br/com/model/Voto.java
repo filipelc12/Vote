@@ -10,6 +10,30 @@ public class Voto {
 		this.chapa = chapa;
 	}
 	
+	public Voto() {
+		
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public Chapa getChapa() {
+		return chapa;
+	}
+
+	public void setChapa(Chapa chapa) {
+		this.chapa = chapa;
+	}
+	
+	
+	
+	
+	
 	//teste
 	
 	
