@@ -45,12 +45,12 @@ public class Teste {
 		
 		
 		
-		urna.registraVoto(voto);
-		urna.registraVoto(voto2);
+		//urna.registraVoto(voto);
+		//urna.registraVoto(voto2);
 		
 	
 		
-		urna.imprimeVoto();
+		//urna.imprimeVoto();
 		
 		
 	
