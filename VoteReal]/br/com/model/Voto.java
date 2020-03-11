@@ -8,9 +8,10 @@ public class Voto {
 	
 	public Voto(Chapa chapa) {
 		this.chapa = chapa;
-	}
+		}
 	
 	public Voto() {
+			
 		
 	}
 
@@ -29,6 +30,12 @@ public class Voto {
 	public void setChapa(Chapa chapa) {
 		this.chapa = chapa;
 	}
+
+	@Override
+	public String toString() {
+		return "Voto [chapa=" + chapa + "]";
+	}
+	
 	
 	
 	

@@ -38,13 +38,10 @@ public class Votando {
 		
 		Voto voto = new Voto(null);
 		Scanner in = new Scanner(System.in);
-		//Scanner on = new Scanner(System.in);
 		int recebeVoto;
 		boolean fimVoto = false;
-		//char simOuNao = 'd';		
 		
 		System.out.println(chapas.toString()); //Metodo para mostrar todas as chapas da votação
-		
 		
 		while(true) {
 			
@@ -57,32 +54,24 @@ public class Votando {
 					System.out.println("Voto computado para a chapa " +chapas.get(i).getNomeChapa());
 					voto.setChapa(chapas.get(i));
 					fimVoto = true;
-					
-					
+				
 				}
 				
 			}
 			if(fimVoto)
 				break;
 			
-			
-			System.out.println("O numero da chapa não existe!\n" );
-			System.out.println("Se voce deseja inserir outro numero digite [1] caso contrario seu voto sera anulado!");
+			System.out.println("O numero da chapa nao existe!" );
+			System.out.println("Se voce deseja inserir outro numero digite [1] caso contrario digite outra tecla e seu voto sera anulado!\n");
 			int simOuNao = in.nextInt();
 			
 			if(simOuNao != 1 ){
 				System.out.println("Seu voto foi computado como Nulo!");
+				
 				break;
 			}
 			
-			
-			
-			
-			
-			
 		}
-		
-				
 		
 		return voto;
 		

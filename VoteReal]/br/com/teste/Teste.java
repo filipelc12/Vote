@@ -23,23 +23,37 @@ public class Teste {
 		
 		Votando votando = new Votando(chapas);
 		
+		Urna urna = new Urna();
+		
+		System.out.println(urna.toString());
+		
 		System.out.println(votando.toString());
 		
 		
 		
 		
 		Voto voto;
+		Voto voto2;
 		
 		voto = votando.executaVoto();
-		
-		System.out.println(voto.getChapa());
-		
+		voto2 = votando.executaVoto();
 		
 		
 		
+		System.out.println("Voto 1: " +voto.getChapa() +voto.getId());
+		System.out.println("Voto 2: " +voto2.getChapa() +voto.getId());
 		
 		
 		
+		urna.registraVoto(voto);
+		urna.registraVoto(voto2);
+		
+	
+		
+		urna.imprimeVoto();
+		
+		
+	
 		
 
 	}
