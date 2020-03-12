@@ -20,7 +20,7 @@ public class Teste {
 		Chapa chapa1 = new Chapa("PT", 13);
 		Chapa chapa2 = new Chapa("PTB", 12);
 		
-		ContaVoto contagem = new ContaVoto();
+		
 		
 		chapas.add(chapa1);
 		chapas.add(chapa2);
@@ -32,6 +32,8 @@ public class Teste {
 		
 		urnas.add(urna);
 		urnas.add(urna2);
+		
+		ContaVoto contagem = new ContaVoto(chapas, urnas);
 		
 		System.out.println(urna.toString());
 		
@@ -62,7 +64,10 @@ public class Teste {
 		
 		//urna.imprimeVoto();
 		
-		contagem.imprimeVotoPorUrna(urnas);
+		contagem.imprimeVotoPorUrna();
+		
+		
+		System.out.println(urna.getVotos().get(0).getId());
 		
 		
 	

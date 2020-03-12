@@ -1,5 +1,7 @@
 package br.com.model;
 
+import br.com.utility.ControleId;
+
 public class Voto {
 	
 	private int id;
@@ -8,10 +10,11 @@ public class Voto {
 	
 	public Voto(Chapa chapa) {
 		this.chapa = chapa;
+		this.id = ControleId.getId();
 		}
 	
 	public Voto() {
-			
+		this.id = ControleId.getId();
 		
 	}
 

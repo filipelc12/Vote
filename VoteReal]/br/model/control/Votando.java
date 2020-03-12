@@ -78,24 +78,5 @@ public class Votando {
 	}
 	
 	
-	
-	
-	
-	/*
-	 * else {
-					System.out.println("O numero da chapa não existe!\n" );
-					System.out.println("Se voce deseja inserir outro numero digite [s] caso contrário seu voto sera anulado!");
-					char simOuNao = in.next().charAt(0);
-					if(simOuNao != 's' || simOuNao != 'S'){
-						break;
-					}
-						
-					
-						
-				}
-	 */
-	
-	
-	
 
 }
