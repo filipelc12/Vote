@@ -64,10 +64,12 @@ public class Teste {
 		
 		//urna.imprimeVoto();
 		
-		contagem.imprimeVotoPorUrna();
+		contagem.imprimeTodosVotos();
+		contagem.computaVoto();
 		
 		
 		System.out.println(urna.getVotos().get(0).getId());
+		System.out.println("O numero de votos e: " +chapa1.getContadorDeVoto());
 		
 		
 	
