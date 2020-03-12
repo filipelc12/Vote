@@ -51,7 +51,7 @@ public class Votando {
 						
 			for(int i = 0; i<chapas.size(); i++) {
 				if(recebeVoto == chapas.get(i).getNumeroChapa()) {
-					System.out.println("Voto computado para a chapa " +chapas.get(i).getNomeChapa());
+					System.out.println("Voto computado para a chapa " +chapas.get(i).getNomeChapa()+"\n");
 					voto.setChapa(chapas.get(i));
 					fimVoto = true;
 				
