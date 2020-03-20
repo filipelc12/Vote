@@ -1,3 +1,7 @@
+/**
+ * Classe cujo objetivo é serializar Ids de voto e urna
+ */
+
 package br.com.utility;
 
 public class ControleId {
