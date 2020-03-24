@@ -36,15 +36,15 @@ public class Votando {
 	
 	public Voto executaVoto() {
 		
-		Voto voto = new Voto(null);
-		Scanner in = new Scanner(System.in);
-		int recebeVoto;
-		boolean fimVoto = false;
+		Voto voto = new Voto(null);//..........
+		Scanner in = new Scanner(System.in);//.
+		int recebeVoto;//......................
+		boolean fimVoto = false;//.............
 		
-		System.out.println(chapas.toString()); //Metodo para mostrar todas as chapas da votação
+		//System.out.println(chapas.toString()); //Metodo para mostrar todas as chapas da votação
 		
 		while(true) {
-			
+			System.out.println(chapas.toString());
 			System.out.println("Informe o numero da sua chapa de acordo com os numeros mostrados acima! \n");
 			
 			recebeVoto = in.nextInt();
