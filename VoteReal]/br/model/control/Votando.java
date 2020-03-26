@@ -1,3 +1,17 @@
+/**
+ * 
+ * @author filipe
+ *
+ *A classe tem por fun√ß√£o executar o processo de voto do sistema
+ *
+ *
+ *ATRIBUTOS
+ *
+ *login Login
+ *chapas List<Chapa>
+ *
+ */
+
 package br.model.control;
 import java.util.ArrayList;
 import java.util.List;
@@ -7,13 +21,7 @@ import br.com.model.Voto;
 import br.com.myvote.*;
 import java.util.Scanner;
 
-/**
- * 
- * @author filipe
- *
- *A classe tem por fun√ß√£o executar o processo de voto do sistema
- *
- */
+
 
 public class Votando {
 	
@@ -21,31 +29,79 @@ public class Votando {
 	private List<Chapa> chapas;
 	
 	
-	public Votando() {
+
+	
+	public Votando(List<Chapa> chapas, Login login) {
+		this.chapas = chapas;
 		
+		// if que faz o construtor apenas SE o login for verdadeiro
+		if(login.isVerificado()) {
+			this.login = login;
+			System.out.println("login criado");
+		}
+						
 	}
 	
-	public Votando(List<Chapa> chapas) {
+	
+
+	public Login getLogin() {
+		return login;
+	}
+
+
+
+	public void setLogin(Login login) {
+		this.login = login;
+	}
+
+
+
+	public List<Chapa> getChapas() {
+		return chapas;
+	}
+
+
+
+	public void setChapas(List<Chapa> chapas) {
 		this.chapas = chapas;
 	}
+
+
 
 	@Override
 	public String toString() {
 		return "Votando [login=" + login + ", chapas=" + chapas + "]";
 	}
 	
+	/*
+	 * Imprime todas as chapas disponiveis para votos
+	 * Recebe votaÁ„o, caso o numero inserido pelo usuario nao seja nenhum numero de chapa o sistema informa que o voto sera computado como nulo
+	 * o usuario pode apertar o botao 1 para votar novamente
+	 * 
+	 * Por fim È exibido uma mensagem com o voto do usuario
+	 */
+	
 	public Voto executaVoto() {
 		
-		Voto voto = new Voto(null);//..........
-		Scanner in = new Scanner(System.in);//.
-		int recebeVoto;//......................
-		boolean fimVoto = false;//.............
+		//VARIAVEIS
 		
-		//System.out.println(chapas.toString()); //Metodo para mostrar todas as chapas da vota√ß√£o
+		Voto voto = new Voto(null);//.......... Cria um voto nulo para ser preenchido no loop ou continua nulo e o voto e computado como nulo
+		Scanner in = new Scanner(System.in);//. Metodo scanner
+		int recebeVoto;//...................... recebe o scanner
+		boolean fimVoto = false;//............. boolean para setar final da votacao
 		
+		
+		System.out.println("Iniciando processo de votacao:");
 		while(true) {
+			
+			if(!this.login.isVerificado()) {
+				System.out.println("Login n„o identificado!");
+				break;
+			}
+				
+			
 			System.out.println(chapas.toString());
-			System.out.println("Informe o numero da sua chapa de acordo com os numeros mostrados acima! \n");
+			System.out.println("\nInforme o numero da sua chapa de acordo com os numeros mostrados acima! \n");
 			
 			recebeVoto = in.nextInt();
 						

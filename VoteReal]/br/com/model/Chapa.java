@@ -1,16 +1,20 @@
 package br.com.model;
 
+import br.com.utility.ControleId;
+
 public class Chapa {
 	
 	private String nomeChapa;
 	private String integrantes;
 	private int	   numeroChapa;
 	private int	   ContadorDeVoto;
+	private int    id;
 	
 	
 	public Chapa(String nomeChapa, int numeroChapa) {
 		this.nomeChapa = nomeChapa;
 		this.numeroChapa = numeroChapa ;
+		this.id = ControleId.getId();
 		
 		
 	}
@@ -60,6 +64,12 @@ public class Chapa {
 	public void setContadorDeVoto(int contadorDeVoto) {
 		ContadorDeVoto = contadorDeVoto;
 	}
+
+
+	public int getId() {
+		return id;
+	}
+	
 	
 	
 	

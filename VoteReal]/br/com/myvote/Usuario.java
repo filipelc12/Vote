@@ -5,16 +5,20 @@ package br.com.myvote;
  * 
  * @author filipe
  * 
- * Classe usuario
- * String nome
- * Login login
- * CPF String
+ *Objetivo:
+ *Primeira classe do fluxo tem por objetivo ser a pessoa física que vai realizar a votacao
+ *
+ *
+ *Atributos:
+ *nome 	varchar
+ *cpf  	varchar
+ *login Login
  *
  */
 
 public class Usuario {
 	private String nome;
-	private Login login;
 	private String cpf;
+	private Login login;
 
 }

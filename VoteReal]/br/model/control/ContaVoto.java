@@ -1,8 +1,19 @@
+/**
+ * @author filipe.carvalho
+ * 
+ * OBJETIVO:
+ * 
+ * Recebe urnas, computa todos votos das urnas e direciona para as chapas corretas 
+ * Lista todos os votos realizados;
+ * 
+ * 
+ * 
+ */
+
 package br.model.control;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import br.com.model.Chapa;
 import br.com.model.Urna;
 
@@ -17,6 +28,13 @@ public class ContaVoto {
 		this.chapas = chapas;
 	}
 	
+	
+	/*
+	 * imprimeTodosVotos
+	 * 
+	 * OBJETIVO
+	 * printar na tela uma especie de lista com todos os votos realizados em todas as urnas
+	 */
 
 	public void imprimeTodosVotos() {
 		
@@ -27,6 +45,10 @@ public class ContaVoto {
 		
 	}
 	
+	/*
+	 * Percorre urnas fazendo GET de todos os votos nas urnas e computando para a chapa correspondente
+	 */
+	
 	public void computaVoto() {
 		for(int ia = 0; ia<urnas.size(); ia++) {
 			for(int ib = 0; ib<urnas.get(ia).getVotos().size(); ib++) {
@@ -36,12 +58,23 @@ public class ContaVoto {
 						chapas.get(ic).setContadorDeVoto(chapas.get(ic).getContadorDeVoto()+1);
 					}
 					}catch (NullPointerException ex) {
-						//System.out.println("Ok deu null");
+						
 					}
 				}
 			}
 		}
 	}
+	
+	/*
+	 * qtdVoto
+	 * 
+	 * OBJETIVO
+	 * retornar um int com quantidade de votos realizados
+	 * 
+	 * 
+	 * RETORNO:
+	 * int
+	 */
 	
 	public int qtdVoto() {
 		
@@ -53,6 +86,12 @@ public class ContaVoto {
 		
 		return qtdVoto;
 	}
+	
+	/*
+	 * resultado
+	 * 
+	 * Retorna a lista de chapas com todos os votos recebidos
+	 */
 	
 	public void resultado() {
 		System.out.println("Resultado da votacao: \n");

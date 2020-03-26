@@ -1,4 +1,5 @@
 /**
+ * @author filipe.carvalho
  * Classe cujo objetivo é serializar Ids de voto e urna
  */
 

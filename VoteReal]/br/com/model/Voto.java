@@ -1,3 +1,13 @@
+/**
+ * @author filipe.carvalho
+ * 
+ * OBJETIVO
+ * 
+ * Uma classe que contém apenas uma chapa e um ID.
+ * O id recever o metodo GetId da classe controleID para que sempre que instanciada seja incrementada o ID
+ * 
+ */
+
 package br.com.model;
 
 import br.com.utility.ControleId;
@@ -10,7 +20,7 @@ public class Voto {
 	
 	public Voto(Chapa chapa) {
 		this.chapa = chapa;
-		this.id = ControleId.getId();
+		this.id = ControleId.getId(); //metodo gera ID
 		}
 	
 	public Voto() {

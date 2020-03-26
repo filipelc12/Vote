@@ -1,3 +1,10 @@
+/**
+ * @author filipe.carvalho
+ * 
+ * OBJETIVO
+ * A urna e o recipiente de votos. Uma urna pode ter 0  ou n votos
+ */
+
 package br.com.model;
 
 import java.util.ArrayList;
@@ -40,6 +47,14 @@ public class Urna {
 	public void registraVoto(Voto voto) {
 		votos.add(voto);
 	}
+	
+	
+	/*
+	 * imprimeVoto
+	 * 
+	 * OBJETIVO
+	 * imprimir uma lista com todos os votos da urna
+	 */
 	
 	public void imprimeVoto() {
 		

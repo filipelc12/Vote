@@ -17,12 +17,19 @@ public class Teste {
 		List<Urna> urnas = new ArrayList<Urna>();
 		
 		
-		Chapa chapa1 = new Chapa("PT", 13);
-		Chapa chapa2 = new Chapa("PTB", 12);
-		Chapa chapa3 = new Chapa("PSOL", 60);
-		Chapa chapa4 = new Chapa("Coronga", 78);
-		Chapa chapa5 = new Chapa("MDB", 45);
+		Chapa chapa1 = new Chapa("AMERICA", 13);
+		Chapa chapa2 = new Chapa("BRASIL", 12);
+		Chapa chapa3 = new Chapa("CANADA", 60);
+		Chapa chapa4 = new Chapa("ALEMANHA", 78);
+		Chapa chapa5 = new Chapa("PERU", 45);
 		
+		
+		Login login = new Login("teste", "1234");
+		
+		login.isVerificado();
+		
+		System.out.println(login.isVerificado());
+		login.verificaLogin();
 		
 		
 		
@@ -32,7 +39,9 @@ public class Teste {
 		chapas.add(chapa4);
 		chapas.add(chapa5);
 		
-		Votando votando = new Votando(chapas);
+		Votando votando = new Votando(chapas, login);
+		
+	//	System.out.println(votando.getLogin().isVerificado());
 		
 		Urna urna = new Urna();
 		Urna urna2 = new Urna();
@@ -46,25 +55,7 @@ public class Teste {
 		
 		ContaVoto contagem = new ContaVoto(chapas, urnas);
 		
-		//System.out.println(urna.toString());
-		
-		//System.out.println(votando.toString());
-		
-		
-		/*
-		
-		Voto voto;
-		Voto voto2;
-		
-		voto = votando.executaVoto();
-		voto2 = votando.executaVoto();
-		
-		
-		
-		System.out.println("Voto 1: " +voto.getChapa() +voto.getId());
-		System.out.println("Voto 2: " +voto2.getChapa() +voto.getId());
-		
-		*/
+
 		
 		urna.registraVoto(votando.executaVoto());
 		urna.registraVoto(votando.executaVoto());
